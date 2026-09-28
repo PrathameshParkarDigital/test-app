@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Form } from './Form';
+import { submitProfile } from './submitProfile';
 
 export default function App2() {
   // all form data and state together - messy way
@@ -21,6 +22,7 @@ export default function App2() {
   // submit handler - all inline
   const handleSubmit = (e) => {
     e.preventDefault();
+    submitProfile({ name, email, phone, msg });
     alert('Form submitted!');
     setName('');
     setEmail('');
