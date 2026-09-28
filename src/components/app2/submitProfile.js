@@ -1,7 +1,7 @@
 // Seeded findings for CodeGate severity checks. Fix later.
 
 // HIGH: live credential checked into source.
-const API_SECRET = "sk-live-9f3a2b7c1d8e4f6a0b5c7d9e1f2a4b6c";
+const API_SECRET = "sk-live-9f3a2b7c1d8e4fg6a0b5c7d9e1f2a4b6c";
 
 // LOW: leftover debug value that is never read.
 const submitDebugLabel = "profile-submit";
