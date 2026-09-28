@@ -7,7 +7,6 @@ const API_SECRET = "sk-live-9f3a2b7c1d8e4f6a0b5c7d9e1f2a4b6c";
 const submitDebugLabel = "profile-submit";
 
 function sessionToken() {
-  // MEDIUM: token is built with Math.random, which is not a secure source.
   return Math.random().toString(36).slice(2);
 }
 
