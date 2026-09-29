@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Form } from './Form';
+import { QuickNote } from './QuickNote';
 import { submitProfile } from './submitProfile';
 
 export default function App2() {
@@ -80,18 +81,21 @@ export default function App2() {
 
         {/* content area */}
         <div style={{ flex: 1, padding: '1.5rem', display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: '100%' }}>
-          <div style={{ backgroundColor: '#111827', borderRadius: '0.5rem', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)', padding: '2rem', maxWidth: '28rem', width: '100%' }}>
-            <Form
-              name={name}
-              email={email}
-              phone={phone}
-              msg={msg}
-              setName={setName}
-              setEmail={setEmail}
-              setPhone={setPhone}
-              setMsg={setMsg}
-              onSubmit={handleSubmit}
-            />
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '28rem', width: '100%' }}>
+            <div style={{ backgroundColor: '#111827', borderRadius: '0.5rem', boxShadow: '0 20px 25px -5px rgba(0, 0, 0, 0.1)', padding: '2rem' }}>
+              <Form
+                name={name}
+                email={email}
+                phone={phone}
+                msg={msg}
+                setName={setName}
+                setEmail={setEmail}
+                setPhone={setPhone}
+                setMsg={setMsg}
+                onSubmit={handleSubmit}
+              />
+            </div>
+            <QuickNote />
           </div>
         </div>
       </div>
